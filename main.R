@@ -83,7 +83,8 @@ rm_na <- function(x) {
 #' [1] 1 4 7
 #' 
 row_medians <- function(x) {
-    return(NULL)
+    medians <- apply(x, 1, median)
+    return(medians)
 }
 
 #' Evaluate each row of a matrix with a provided function
@@ -108,7 +109,8 @@ row_medians <- function(x) {
 #' summarize_rows(m, mean)
 #' [1] 2 5 8
 summarize_rows <- function(x, fn, na.rm=FALSE) {
-    return(NULL)
+    summaries <- apply(x, 1, fn)
+    return(summaries)
 }
 
 #' Summarize matrix rows into data frame
