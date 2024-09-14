@@ -45,7 +45,8 @@ less_than_zero <- function(x) {
 #' [2,]  TRUE FALSE FALSE
 #' [3,] FALSE FALSE FALSE
 is_between <- function(x, a, b) {
-  return(NULL)
+  res<- (x>a) & (x<b)
+  return(res)
 }
 
 #' Return the values of the input vector that are not NA

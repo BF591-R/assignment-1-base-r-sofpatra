@@ -389,7 +389,7 @@ than some value <span class="math inline">\(a\)</span> and less than
 <code>TRUE</code> when an element is strictly between values
 <code>a</code> and <code>b</code>, and <code>FALSE</code> otherwise.</p>
 <pre class="r"><code>is_between(x, -1, 1)</code></pre>
-<pre><code>## NULL</code></pre>
+<pre><code>##  [1]  TRUE FALSE  TRUE FALSE  TRUE FALSE  TRUE FALSE FALSE  TRUE</code></pre>
 <p>We can again use the fact that logical vectors are numeric to sanity
 check our code. Recall from above that our vector has 100 samples drawn
 from a normal distribution with mean zero and standard devation 1. From
@@ -397,14 +397,14 @@ the theoretical definition of a normal distribution, we would expect
 68.2% of our values to fall within one standard deviation of zero. We
 can check that similarly to above.</p>
 <pre class="r"><code>sum(is_between(x, -1, 1))</code></pre>
-<pre><code>## [1] 0</code></pre>
+<pre><code>## [1] 5</code></pre>
 <p>Due to sampling error the fraction of samples in this range likely
 won’t be exactly 68.2% for any given data set, but if we increase the
 number of samples it should approach this number.</p>
 <pre class="r"><code># now sample 100k times and check to see how many fall within 1 standard deviation of 0
 num_samples &lt;- 100000
 sum(is_between(sample_normal(num_samples), -1, 1))/num_samples</code></pre>
-<pre><code>## [1] 0</code></pre>
+<pre><code>## [1] 0.68389</code></pre>
 </div>
 <div id="missing-values" class="section level2">
 <h2>3. Missing Values</h2>
