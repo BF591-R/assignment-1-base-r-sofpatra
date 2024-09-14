@@ -1,6 +1,6 @@
 ---
 title: "Assignment: Base R"
-author: Sofiya Patra
+author: Sofiya 
 output: html_document
 ---
 
