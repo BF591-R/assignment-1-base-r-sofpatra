@@ -2,6 +2,7 @@
 
 #' Evaluate whether the argument is less than 2
 #' 
+#' 
 #' Returns TRUE if the numeric argument x is a prime number, otherwise returns
 #' FALSE
 #'
@@ -18,7 +19,8 @@
 #' less_than_zero(c(-1,0,1,2,3,4))
 #' [1] TRUE FALSE FALSE FALSE FALSE FALSE
 less_than_zero <- function(x) {
-  return(NULL)
+  res <- x < 0
+  return(res)
 }
 #' Evaluate whether the argument is between two numbers
 #'
