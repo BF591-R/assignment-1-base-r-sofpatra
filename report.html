@@ -370,13 +370,13 @@ deviation of 1.</p>
 <pre class="r"><code># NB: sample_normal is defined in main.R
 x &lt;- sample_normal(10)
 less_than_zero(x)</code></pre>
-<pre><code>## NULL</code></pre>
+<pre><code>##  [1] FALSE  TRUE  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE  TRUE</code></pre>
 <p>Recall that logical values <code>TRUE</code> and <code>FALSE</code>
 are numerically equal to 1 and 0, respectively. We can therefore perform
 arithmetic operations on them. A quick way to see how many values are
 <code>TRUE</code> in a logical vector by summing it:</p>
 <pre class="r"><code>sum(less_than_zero(x))</code></pre>
-<pre><code>## [1] 0</code></pre>
+<pre><code>## [1] 4</code></pre>
 </div>
 <div id="more-complicated-logical-tests" class="section level2">
 <h2>2. More Complicated Logical Tests</h2>
